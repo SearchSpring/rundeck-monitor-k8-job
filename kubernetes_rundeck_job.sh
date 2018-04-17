@@ -1,5 +1,4 @@
 #!/bin/bash
-JOBNAME=@option.JOBNAME@
 
 get_podname () {
     PODNAME=`kubectl get pods -l "job-name=$JOBNAME" --sort-by="{.metadata.creationTimestamp}" | tail -1 | cut -f1 -d' '`
